@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
         {product.image ? (
           <Image
             src={`/images/products/${product.image}.webp`}
-            alt={product.name}
+            alt={`${product.name} – Premium Mukhwas from Shivlal Jeram (Since 1946)`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="object-contain p-3 sm:p-4 transition-transform duration-500 group-hover:scale-110"

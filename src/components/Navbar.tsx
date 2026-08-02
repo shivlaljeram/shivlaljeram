@@ -30,18 +30,18 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 sm:h-20 items-center justify-between">
           <a href="#" className="flex items-center gap-3 group shrink-0">
-            <div className="relative h-9 w-9 sm:h-10 sm:w-10 overflow-hidden rounded-xl shadow-lg shadow-accent/15 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-9 w-9 sm:h-10 sm:w-10 overflow-hidden rounded-xl bg-white shadow-lg shadow-accent/15 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/images/logo.svg"
-                alt="JSD Mukhwas"
+                src="/images/logo.png"
+                alt="Shivlal Jeram Dhanawala"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            <div>
-              <span className="text-lg sm:text-xl font-bold tracking-tight text-text-white" style={{ fontFamily: 'var(--font-serif)' }}>JSD</span>
-              <span className="block text-[8px] uppercase tracking-[0.2em] text-gold-light/60 -mt-0.5">Mukhwas — Since 1946</span>
+            <div className="min-w-0">
+              <span className="block truncate text-base sm:text-xl font-bold tracking-tight text-text-white leading-tight" style={{ fontFamily: 'var(--font-serif)' }}>Shivlal Jeram</span>
+              <span className="block text-[8px] uppercase tracking-[0.2em] text-gold-light/60 mt-0.5">Dhanawala — Since 1946</span>
             </div>
           </a>
 

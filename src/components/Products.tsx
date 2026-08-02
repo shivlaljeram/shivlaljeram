@@ -6,22 +6,29 @@ import ProductCard from './ProductCard'
 
 export default function Products() {
   const [search, setSearch] = useState('')
+  const [category, setCategory] = useState('all')
+
+  const categories = useMemo(() => {
+    const cats = [...new Set(productsData.map(p => p.category))]
+    return ['all', ...cats]
+  }, [])
 
   const filtered = useMemo(() => {
-    if (!search.trim()) return productsData
-    const q = search.toLowerCase()
+    const q = search.trim().toLowerCase()
     return productsData.filter(p =>
-      p.name.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q)
+      (category === 'all' || p.category === category) &&
+      (!q ||
+        p.name.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q))
     )
-  }, [search])
+  }, [search, category])
 
   return (
-    <section id="products" className="py-16 sm:py-24 bg-bg-secondary border-t border-border">
+    <section id="products" className="pt-8 sm:pt-10 pb-12 sm:pb-16 bg-bg-secondary border-t border-border scroll-mt-20 sm:scroll-mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
           <div>
-            <span className="inline-flex items-center gap-1.5 rounded-lg border border-accent/20 bg-accent-subtle px-3 py-1 mb-3">
+            <span className="inline-flex items-center gap-1.5 rounded-lg border border-accent/20 bg-accent-subtle px-3 py-1 mb-2">
               <span className="text-[10px] font-semibold text-accent-light uppercase tracking-wider">Our Range</span>
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-text-white font-serif">Premium Products</h2>
@@ -47,11 +54,28 @@ export default function Products() {
             <p className="text-text-muted text-sm">No products match your search.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-            {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          <>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategory(cat)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold capitalize transition-all duration-200 border ${
+                    category === cat
+                      ? 'bg-accent text-white border-accent shadow-md shadow-accent/20'
+                      : 'bg-bg-card/50 text-text-muted border-border hover:border-accent/40 hover:text-text-white'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
+              {filtered.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </>
         )}
       </div>
     </section>

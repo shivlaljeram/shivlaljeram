@@ -42,6 +42,9 @@ yarn-error.log*
 # pdf
 *.pdf
 
+# raw unoptimized source photos
+/raw-photos/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

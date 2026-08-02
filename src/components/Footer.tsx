@@ -6,13 +6,13 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border bg-bg-deep">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-5">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 overflow-hidden rounded-lg shadow-sm">
+            <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-white shadow-sm">
               <Image
-                src="/images/logo.svg"
-                alt="JSD Mukhwas"
+                src="/images/logo.png"
+                alt="Shivlal Jeram Dhanawala"
                 fill
                 className="object-contain"
               />

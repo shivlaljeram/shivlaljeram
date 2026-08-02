@@ -1,12 +1,13 @@
 {
-  "name": "JSD",
-  "fullName": "JSD Mukhwas",
+  "siteUrl": "https://jsdmukhwas.com",
+  "name": "Shivlal Jeram",
+  "fullName": "Shivlal Jeram Dhanawala",
   "tagline": "Traditional Taste, Premium Quality",
   "description": "Premium quality mukhwas crafted with traditional recipes and finest ingredients since generations.",
   "about": {
     "title": "Our Legacy",
     "paragraphs": [
-      "JSD has been crafting premium mukhwas for generations, bringing the finest traditional mouth fresheners to your table. Our recipes are perfected over decades, using only the highest quality ingredients sourced from across India.",
+      "Shivlal Jeram Dhanawala has been crafting premium mukhwas for generations, bringing the finest traditional mouth fresheners to your table. Our recipes are perfected over decades, using only the highest quality ingredients sourced from across India.",
       "Every batch is prepared with care, ensuring the perfect blend of flavours that awaken your senses and leave a lasting impression. We believe in preserving the authentic taste of tradition while maintaining the highest standards of quality and hygiene."
     ],
     "features": [
@@ -17,17 +18,16 @@
     ]
   },
   "testimonials": [
+    { "name": "Vikram Joshi", "location": "Jamnagar", "text": "Premium quality mukhwas at reasonable prices. The 7 Seeds blend is my personal favourite.", "rating": 5 },
     { "name": "Priya Sharma", "location": "Mumbai", "text": "Best mukhwas I've ever tasted! The Jamnagari Mukhwas is absolutely authentic — tastes just like home.", "rating": 5 },
-    { "name": "Rahul Mehta", "location": "Ahmedabad", "text": "Been ordering from JSD for years. Consistent quality and that traditional flavour never changes.", "rating": 5 },
-    { "name": "Anita Patel", "location": "Surat", "text": "Their Masala Ginger Vati is a lifesaver after meals. Fresh breath and great taste — highly recommend!", "rating": 5 },
-    { "name": "Vikram Joshi", "location": "Delhi", "text": "Premium quality mukhwas at reasonable prices. The 7 Seeds blend is my personal favourite.", "rating": 4 }
+    { "name": "Rahul Mehta", "location": "Ahmedabad", "text": "Been ordering from Shivlal Jeram Dhanawala for years. Consistent quality and that traditional flavour never changes.", "rating": 5 },
+    { "name": "Anita Patel", "location": "Surat", "text": "Their Masala Ginger Vati is a lifesaver after meals. Fresh breath and great taste — highly recommend!", "rating": 5 }
   ],
   "contact": {
     "address": "Jamnagar, Gujarat, India",
     "phone": "+91 878 082 1951",
     "whatsapp": "918780821951",
-    "whatsappMessage": "Namaste! I would like to order premium mukhwas from JSD.",
-    "email": "hello@jsdmukhwas.com",
+    "whatsappMessage": "Namaste! I would like to order premium mukhwas from Shivlal Jeram Dhanawala.",
     "hours": "Mon - Sat: 9:00 AM - 7:00 PM"
   },
   "footer": {
@@ -39,7 +39,7 @@
     ]
   },
   "seo": {
-    "title": "JSD Mukhwas — Premium Traditional Mouth Fresheners Since 1946",
-    "description": "Discover JSD's premium range of traditional mukhwas. Authentic recipes, finest ingredients, delivered to your doorstep. 80+ years of trust."
+    "title": "Shivlal Jeram Dhanawala — Premium Traditional Mouth Fresheners Since 1946",
+    "description": "Discover Shivlal Jeram Dhanawala's premium range of traditional mukhwas. Authentic recipes, finest ingredients, delivered to your doorstep. 80+ years of trust."
   }
 }

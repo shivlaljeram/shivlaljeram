@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import BackToTop from "@/components/BackToTop";
 import StructuredData from "@/components/StructuredData";
+import PWA from "@/components/PWA";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -21,7 +22,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const siteUrl = "https://jsdmukhwas.com";
+const siteUrl = siteData.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,12 +33,13 @@ export const metadata: Metadata = {
     description: siteData.seo.description,
     type: "website",
     siteName: siteData.fullName,
-    images: [{ url: "/images/logo.svg", width: 180, height: 48 }],
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: siteData.fullName }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteData.seo.title,
     description: siteData.seo.description,
+    images: ["/images/og-image.png"],
   },
   robots: "index, follow",
 };
@@ -47,6 +49,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
+      <head>
+        <meta name="theme-color" content="#0A0B0E" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-bg-primary text-text-white">
         <Navbar />
         <main className="flex-1">{children}</main>
@@ -55,6 +62,7 @@ export default function RootLayout({
         <MobileStickyBar />
         <BackToTop />
         <StructuredData />
+        <PWA />
       </body>
     </html>
   );

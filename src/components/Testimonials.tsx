@@ -34,19 +34,19 @@ export default function Testimonials() {
   if (!testimonials || testimonials.length === 0) return null
 
   return (
-    <section className="py-16 sm:py-24 bg-bg-secondary border-t border-border">
+    <section className="py-12 sm:py-16 bg-bg-secondary border-t border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" ref={sectionRef}>
-        <div className="text-center max-w-xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 rounded-lg border border-accent/20 bg-accent-subtle px-3 py-1 mb-4">
+        <div className="text-center max-w-xl mx-auto mb-8">
+          <span className="inline-flex items-center gap-1.5 rounded-lg border border-accent/20 bg-accent-subtle px-3 py-1 mb-3">
             <span className="text-[10px] font-semibold text-accent-light uppercase tracking-wider">Testimonials</span>
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-text-white font-serif">What Our Customers Say</h2>
-          <p className="mt-2 text-sm text-text-muted">Real feedback from real people who love JSD Mukhwas</p>
+          <p className="mt-1.5 text-sm text-text-muted">Real feedback from real people who love Shivlal Jeram Dhanawala</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {testimonials.map((t, i) => (
-            <div key={i} className="animate-on-scroll rounded-xl border border-border bg-bg-card backdrop-blur-sm p-5 sm:p-6 hover:border-accent/20 transition-all duration-300" style={{ transitionDelay: `${i * 100}ms` }}>
+            <div key={i} className="animate-on-scroll rounded-xl border border-border bg-bg-card backdrop-blur-sm p-5 hover:border-accent/20 transition-all duration-300" style={{ transitionDelay: `${i * 100}ms` }}>
               <div className="flex gap-0.5 mb-3">
                 {stars(t.rating)}
               </div>

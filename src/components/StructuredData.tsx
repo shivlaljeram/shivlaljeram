@@ -1,20 +1,21 @@
 import siteData from '@/data/site.json'
+import productsData from '@/data/products.json'
 
 export default function StructuredData() {
+  const siteUrl = siteData.siteUrl
   const org = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": siteData.fullName,
     "alternateName": siteData.name,
     "description": siteData.description,
-    "url": "https://jsdmukhwas.com",
-    "logo": "https://jsdmukhwas.com/images/logo.svg",
+    "url": siteUrl,
+    "logo": `${siteUrl}/images/logo.png`,
     "foundingDate": "1946",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": siteData.contact.phone,
-      "contactType": "sales",
-      "email": siteData.contact.email
+      "contactType": "sales"
     },
     "address": {
       "@type": "PostalAddress",
@@ -30,19 +31,20 @@ export default function StructuredData() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "Product",
-        "name": "Jamnagari Mukhwas",
-        "description": "Traditional Jamnagari-style mukhwas with authentic spices.",
-        "category": "Mukhwas",
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "url": "https://jsdmukhwas.com"
-        }
+    "itemListElement": productsData.map((p, i) => ({
+      "@type": "Product",
+      "position": i + 1,
+      "name": p.name,
+      "description": p.description,
+      "category": p.category,
+      "image": `${siteUrl}/images/products/${p.image}.webp`,
+      "brand": { "@type": "Brand", "name": siteData.fullName },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": siteUrl
       }
-    ]
+    }))
   }
 
   return (
